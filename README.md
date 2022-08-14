@@ -12,7 +12,8 @@ nodejs + MySQL + express + art-template
 CREATE TABLE `message_board` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(50) NOT NULL DEFAULT '0',
-	`content` VARCHAR(50) NOT NULL DEFAULT '0',
+	`content` VARCHAR(255) NOT NULL DEFAULT '0',
+	`state` VARCHAR(50) NOT NULL DEFAULT '0',
 	INDEX `id` (`id`)
 )
 COMMENT='留言板数据'
