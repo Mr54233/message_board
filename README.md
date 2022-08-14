@@ -1,7 +1,10 @@
+# 简易的数据库留言板
+nodejs + MySQL + express + art-template
+
 # 使用说明
 
-1.  npm install
-2.  node app.js
+1.  npm i
+2.  node index.js
 
 # 建表
 

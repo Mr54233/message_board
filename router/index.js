@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../db.js");
+const db = require("../database/db.js");
 const common = require("../utils/common.js");
 
 // 首页
 router.get("/", (req, res) => {
-	let sql = "SELECT * FROM `message_board`";
+	// 按id倒序排列
+	let sql = "SELECT * FROM `message_board` ORDER BY id DESC";
 	db.Query(sql).then((data) => {
 		res.render("index.html", {
 			title: "首页",
